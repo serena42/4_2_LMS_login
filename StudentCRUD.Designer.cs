@@ -37,6 +37,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            btnSortGPA = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             // btnDeleteStudent
             // 
-            btnDeleteStudent.Location = new Point(553, 758);
+            btnDeleteStudent.Location = new Point(355, 758);
             btnDeleteStudent.Name = "btnDeleteStudent";
             btnDeleteStudent.Size = new Size(172, 34);
             btnDeleteStudent.TabIndex = 2;
@@ -117,11 +118,22 @@
             label3.TabIndex = 9;
             label3.Text = "Last Name";
             // 
+            // btnSortGPA
+            // 
+            btnSortGPA.Location = new Point(397, 570);
+            btnSortGPA.Name = "btnSortGPA";
+            btnSortGPA.Size = new Size(112, 34);
+            btnSortGPA.TabIndex = 10;
+            btnSortGPA.Text = "GPA sort";
+            btnSortGPA.UseVisualStyleBackColor = true;
+            btnSortGPA.Click += btnSortGPA_Click;
+            // 
             // StudentCRUD
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 822);
+            Controls.Add(btnSortGPA);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -150,5 +162,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button btnSortGPA;
     }
 }

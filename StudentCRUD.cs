@@ -62,8 +62,19 @@ namespace _4_2_LMS_login
         {
             if (dataGridView1.SelectedRows.Count == 0)
                 return;
-            var selected =dataGridView1.SelectedRows[0].DataBoundItem as Student;
+            var selected = dataGridView1.SelectedRows[0].DataBoundItem as Student;
             if (selected != null) students.Remove(selected);
         }
+
+        private void btnSortGPA_Click(object sender, EventArgs e)
+        {
+            var sorted = students.ToList();
+            sorted.Sort(new Student.StudentGPAComparer());
+
+            students = new BindingList<Student>(sorted);
+            dataGridView1.DataSource = students;
+        }
+
+
     }
 }

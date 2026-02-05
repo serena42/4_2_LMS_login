@@ -45,7 +45,40 @@ namespace _4_2_LMS_login
         {
             return x.Id.CompareTo(y.Id);
         }
+        class StudentFirstNameComparer : IComparer<Student>
+        {
+            public int Compare(Student? x, Student? y)
+            {
+                return string.Compare(x.FirstName, y.FirstName, StringComparison.OrdinalIgnoreCase);
+            }
+        }
 
+        class StudentLastNameComparer : IComparer<Student>
+        {
+            public int Compare(Student? x, Student? y)
+            {
+                return string.Compare(x.LastName, y.LastName, StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
+        public class StudentGPAComparer : IComparer<Student>
+        {
+            public int Compare(Student? x, Student? y)
+            {
+                return y.GPA.CompareTo(x.GPA);
+            }
+        }
+
+        class StudentIdComparer : IComparer<Student>
+        {
+            public int Compare(Student? x, Student? y)
+            {
+                return x.Id.CompareTo(y.Id);
+            }
+        }
+
+        
+        
 
 
         //public int CompareTo(Student? other)
